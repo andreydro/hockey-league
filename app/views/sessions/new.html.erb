@@ -1,0 +1,15 @@
+<% provide(:title, "Логин")%>
+<div class="log-in-form-head">
+  Войти в личный кабинет
+</div>
+<div class="sign-up-form">
+  <%= form_for(:session, url: login_path) do |f| %>
+    <%= f.label :email %>
+    <%= f.email_field :email, class: 'form-control' %>
+
+    <%= f.label "Пароль" %>
+    <%= f.password_field :password, class: 'form-control' %>
+
+    <%= f.submit 'Войти', class: 'btn btn-primary' %>
+  <% end %>
+</div>
