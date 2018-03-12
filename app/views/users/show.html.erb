@@ -1,4 +1,10 @@
 <% provide(:title, "Beliga") %>
 <h1>
-  <%= @user.first_name %>
+  <ul>
+    <li><%= @user.first_name %></li>
+    <li><%= @user.second_name %></li>
+    <li><%= @user.patronymic %></li>
+    <li><%= @user.email %></li>
+    <li><%= @user.birthday %></li>
+  </ul>
 </h1>
