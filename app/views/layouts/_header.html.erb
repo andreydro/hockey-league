@@ -4,8 +4,18 @@
   </div>
   <div class="top-log-in">
     <% if logged_in? %>
-      <div><%= link_to "Аккаунт", current_user %></div>
-      <div><%= link_to "Выйти", logout_path, method: :delete %></div>
+      <ul class="account-button">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Аккаунт
+          </a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Профиль", current_user %></li>
+            <li><%= link_to "Настройки", edit_user_path(current_user) %></li>
+            <li><%= link_to "Выйти", logout_path, method: :delete %></li>
+          </ul>
+        </li>
+      </ul>
     <% else %>
       <div><%= link_to "Регистрация", signup_path %></div>
       <div>или</div>

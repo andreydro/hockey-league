@@ -1,0 +1,31 @@
+<% provide(:title, "Профиль") %>
+<div class="profile-head">Обновить профиль</div>
+<div class="float-right">
+  <%= render 'shared/error_messages' %>
+</div>
+<div class="sign-up-form">
+  <%= form_for(@user) do |f| %>
+    <%= f.label "Имя" %>
+    <%= f.text_field :first_name, class: 'form-control' %>
+
+    <%= f.label "Фамилия" %>
+    <%= f.text_field :second_name, class: 'form-control' %>
+
+    <%= f.label "Отчество" %>
+    <%= f.text_field :patronymic, class: 'form-control' %>
+
+    <%= f.label "Дата рождения" %>
+    <%= f.date_field :birthday, class: 'form-control' %>
+
+    <%= f.label :email %>
+    <%= f.email_field :email, class: 'form-control' %>
+
+    <%= f.label "Пароль" %>
+    <%= f.password_field :password, class: 'form-control' %>
+
+    <%= f.label "Подтверждение пароля" %>
+    <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+    <%= f.submit "Сохранить изменения", class: "btn btn-primary" %>
+  <% end %>
+</div>

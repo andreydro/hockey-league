@@ -1,3 +1,6 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 body {
   margin: 0px;
   font-size: 16px;
@@ -121,4 +124,19 @@ body {
 #session_remember_me {
   width: auto;
   margin-left: 0;
+}
+
+.account-button {
+  margin-top: 20px;
+  li {
+    list-style: none;
+  }
+}
+
+.profile-head {
+  display: block;
+  font-size: 30px;
+  margin-left: 35%;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
