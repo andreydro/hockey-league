@@ -4,4 +4,6 @@ User.create!(first_name:  "Admin",
              email: "admin@mail.ru",
              password:              "password",
              password_confirmation: "password",
-             admin: true)
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
