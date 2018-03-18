@@ -1,0 +1,21 @@
+<% provide(:title, 'Восстановление пароля') %>
+<div class="profile-head">
+  Восстановление пароля
+</div>
+<div class="row">
+  <div class="sign-up-form">
+    <%= form_for(@user, url: password_reset_path(params[:id])) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= hidden_field_tag :email, @user.email %>
+
+      <%= f.label "Пароль" %>
+      <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.label "Подтверждение пароля" %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+      <%= f.submit "Обновить пароль", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
